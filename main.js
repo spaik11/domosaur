@@ -5,24 +5,29 @@ document.querySelector('#triceratops').style.width = '324px';
 document.querySelector('#hide-me').style.display = 'none';
 
 // Event Listeners!
+document.querySelector('#triceratops').addEventListener('click', redBorder)
+
+document.querySelector('#feathers').addEventListener('click', makeTransparent)
+
+document.querySelector('#rattle').addEventListener('click', addPadding)
+
+document.querySelector('#toggle').addEventListener('click', changeBackgroundColor)
+
+document.querySelector('#t-rex').addEventListener('mouseover', growPic)
+
+document.querySelector('#t-rex').addEventListener('mouseout', changePicBack)
+
 function redBorder(event) {
     event.target.style.border = '5px solid red';
 }
-
-document.querySelector('#triceratops').addEventListener('click', redBorder)
 
 function makeTransparent(event) {
     event.target.style.opacity = '.50';
 }
 
-document.querySelector('#feathers').addEventListener('click', makeTransparent)
-
 function addPadding(event) {
     event.target.style.paddingRight = '100px';
 }
-
-document.querySelector('#rattle').addEventListener('click', addPadding)
-
 
 function changeBackgroundColor() {
     const findRow = document.querySelector('#row');
@@ -35,16 +40,10 @@ function changeBackgroundColor() {
     }
 }
 
-document.querySelector('#toggle').addEventListener('click', changeBackgroundColor)
-
 function growPic() {
     event.target.style.width = '200px';
 }
 
-document.querySelector('#t-rex').addEventListener('mouseover', growPic)
-
 function changePicBack() {
     event.target.style.width = '162px';
 }
-
-document.querySelector('#t-rex').addEventListener('mouseout', changePicBack)
